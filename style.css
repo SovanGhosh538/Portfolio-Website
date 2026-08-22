@@ -1,0 +1,549 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(26, 26, 26);
+    font-family: sans-serif;
+    color: white;
+    line-height: 1.6;
+    height: 100vh;
+    position: relative;
+}
+.container{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+}
+.sidebar{
+    height: 90vh;
+    background-color: rgb(46, 45, 45);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    position:sticky;
+    top: 40px;
+}
+.sidebar:hover{
+    box-shadow: 0px 0px 20px 0px #bdc0c1;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 30px;
+}
+.profile img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+.profile h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-top: 5px;
+}
+.profile p{
+    background-color: #1e1e1e;
+    padding: 5px 15px;
+    color: #ffbf00;
+    border: 1px solid #3a3a3a;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.profile p:hover{
+    box-shadow: 0px 0px 5px 0px #ffbf00;
+}
+.contact{
+    margin: 10px;
+    padding: 20px 0px;
+    border-top: 2px solid #656565;
+    border-bottom: 2px solid #656565;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    text-align: center;
+    color: #e0e0e0;
+}
+.contact a{
+    text-decoration: none;
+    color: #e0e0e0;
+}
+.contact h3{
+    color: #888585;
+}
+.social{
+    text-align: center;
+}
+.social img{
+    height: 30px;
+    width: 24px;
+    margin: 2px;
+    filter: grayscale(1) invert(0.8);
+}
+.social img:hover{
+    filter:none ;
+}
+.content{
+    background-color: rgb(46, 45, 45);
+    border-radius: 10px;
+}
+.navigation{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #888585;
+    margin: 20px 40px;
+}
+nav{
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #888585;
+}
+nav a:hover{
+    color: #ffbf00;
+}
+#aboutMe{
+    padding: 20px;
+    margin: 0px 40px;
+}
+#aboutMe h2{
+    color: #e7e0e0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.line{
+    height: 5px;
+    width: 50px;
+    background-color: #ffbf00;
+    margin-bottom: 20px;
+}
+#aboutMe p{
+    color: #bdc0c1;
+}
+#skills{
+    padding: 20px;
+    margin: 0px 40px;
+}
+#skills h2{
+    color: #e7e0e0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.technology{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+    gap: 40px;
+}
+.technology div{
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #656565;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, boxshadow 0.3s ease;
+}
+.technology div:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 0px #656565;
+}
+.technology img{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+}
+.technology h3{
+    font-size: 15px;
+}
+#education{
+    padding: 20px;
+    margin: 0px 40px;
+}
+#education h2{
+    color: #e7e0e0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.year{
+    color: #a0a0a0;
+    margin-bottom: 5px;
+}
+.edu{
+    position: relative;
+}
+.edu h3{
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.institute{
+    color: #a0a0a0;
+}
+.board{
+    color: #656565;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.college, .schoolHS, .schoolX{
+    position: relative;
+    padding-left: 25px;
+}
+.goal{
+    height: 15px;
+    width: 15px;
+    border: 3px solid #ffbf00;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    z-index: 1;
+}
+.liner{
+    width: 2px;
+    position: absolute;
+    top: 8px;
+    bottom: 0px;
+    left: 5.5px;
+    border: 2px solid #656565;
+}
+#certificates{
+    padding: 0px 20px;
+    margin: 0px 40px;
+}
+#certificates h2{
+    color: #e7e0e0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.certificates{
+    padding: 10px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 40px;
+}
+.certificates img{
+    height: 200px;
+    width: 300px;
+}
+.certificates .android img{
+    height: 300px;
+    width: 230px;
+}
+.certificates div{
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #656565;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, boxshadow 0.3s ease;
+    cursor: pointer;
+}
+.certificates div:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 0px #656565;
+}
+.certificates h3{
+    padding-top: 20px;
+    font-size: 15px;
+}
+.certificates .OOP #oop{
+    padding-top: 0px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .container {
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar {
+        height: calc(100vh - 40px);
+        top: 20px;
+    }
+
+    .profile img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .profile h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact {
+        font-size: 14px;
+    }
+
+    .navigation {
+        margin: 20px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    #aboutMe,
+    #skills,
+    #education,
+    #certificates {
+        margin: 0 20px;
+    }
+
+    .technology {
+        gap: 20px;
+    }
+
+    .certificates {
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    .certificates img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .certificates .android img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* MOBILE */
+@media (max-width: 700px) {
+
+    body {
+        height: auto;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Sidebar */
+
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .profile img {
+        height: 110px;
+        width: 110px;
+    }
+
+    .profile h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact {
+        margin: 10px 20px;
+        padding: 20px 10px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .contact h3 {
+        margin-top: 5px;
+    }
+
+    .social {
+        padding: 15px 0 25px;
+    }
+
+    /* Content */
+
+    .content {
+        width: 100%;
+    }
+
+    .navigation {
+        margin: 0;
+        padding: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    #aboutMe,
+    #skills,
+    #education,
+    #certificates {
+        margin: 0;
+        padding: 20px;
+    }
+
+    #aboutMe h2,
+    #skills h2,
+    #education h2,
+    #certificates h2 {
+        font-size: 26px;
+    }
+
+    /* Skills */
+
+    .technology {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .technology div {
+        padding: 15px;
+    }
+
+    .technology div:hover {
+        transform: scale(1.03);
+    }
+
+    /* Education */
+
+    .college,
+    .schoolHS,
+    .schoolX {
+        padding-left: 25px;
+    }
+
+    .edu h3 {
+        font-size: 1rem;
+    }
+
+    .institute {
+        font-size: 14px;
+    }
+
+    .board {
+        font-size: 13px;
+    }
+
+    /* Certificates */
+
+    .certificates {
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .certificates div {
+        padding: 15px;
+    }
+
+    .certificates div:hover {
+        transform: scale(1.03);
+    }
+
+    .certificates img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .certificates .android img {
+        width: auto;
+        max-width: 100%;
+        height: 300px;
+    }
+}
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    #aboutMe,
+    #skills,
+    #education,
+    #certificates {
+        padding: 15px;
+    }
+
+    #aboutMe h2,
+    #skills h2,
+    #education h2,
+    #certificates h2 {
+        font-size: 23px;
+    }
+
+    .technology {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .technology div {
+        padding: 12px 5px;
+    }
+
+    .technology img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .technology h3 {
+        font-size: 13px;
+    }
+
+    .certificates h3 {
+        font-size: 14px;
+        text-align: center;
+    }
+}
